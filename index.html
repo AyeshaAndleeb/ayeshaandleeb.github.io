@@ -36,9 +36,9 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ayesha Andleeb",
-    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Sahiwal", "url": "@@uosahiwal@@" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Sahiwal", "url": "https://www.uosahiwal.edu.pk/" },
     "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Computer Vision", "Natural Language Processing", "Large Language Models", "Medical AI"],
-    "sameAs": ["@@github@@", "@@linkedin@@", "@@leetcode@@"]
+    "sameAs": ["https://github.com/AyeshaAndleeb", "https://www.linkedin.com/in/ayesha129", "http://leetcode.com/u/Ayesha-Andleeb/"]
   }
   </script>
 </head>
@@ -87,55 +87,64 @@
 
   <main id="main">
 
-    <!-- ============ HOME ============ -->
+    <!-- ============ HERO ============ -->
     <section id="home" class="mx-auto max-w-6xl px-5 pb-16 pt-14 sm:px-8 sm:pt-20 lg:pb-24">
-      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
-        <div class="lg:col-span-8">
+      <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
+        <!-- Left: text -->
+        <div class="lg:col-span-7">
           <p class="eyebrow">Academic Profile</p>
           <h1 class="mt-4 font-serif text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Ayesha Andleeb</h1>
-          <p class="mt-5 font-serif text-xl text-muted sm:text-2xl">Artificial Intelligence <span class="text-rule">·</span> Machine Learning <span class="text-rule">·</span> Deep Learning</p>
+          <p class="mt-5 font-serif text-xl text-muted sm:text-2xl">AI &amp; Machine Learning <span class="mx-1 text-rule">|</span> Deep Learning <span class="mx-1 text-rule">|</span> Computer Vision <span class="mx-1 text-rule">|</span> Medical AI</p>
 
           <p class="mt-8 max-w-2xl text-lg leading-relaxed">
             BS Information Technology graduate from the University of Sahiwal working on deep learning for computer vision, NLP, and retrieval-augmented LLM systems, with a focus on medical AI. I have built research-oriented projects in these areas and teach programming and generative AI to learners internationally.
           </p>
 
           <div class="mt-9 flex flex-wrap items-center gap-3">
-            <a class="btn-solid" href="#projects">View Research &amp; Projects</a>
-            <a class="btn-outline" href="assets/cv/Ayesha_Andleeb_CV.pdf" download>Download CV</a>
-            <a class="btn-text" href="#contact">Contact me &rarr;</a>
+            <a class="btn-solid" href="#research">View Research</a>
+            <a class="btn-outline" href="#projects">View Projects</a>
+            <a class="btn-text" href="assets/cv/Ayesha_Andleeb_CV.pdf" download>Download CV &rarr;</a>
           </div>
 
           <ul class="mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Profiles">
-            <li><a class="link" href="@@github@@" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a class="link" href="@@linkedin@@" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a class="link" href="@@leetcode@@" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
-            <li><a class="link" href="@@email@@">ayeshaandleeb129@gmail.com</a></li>
+            <li><a class="link" href="https://github.com/AyeshaAndleeb" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a class="link" href="https://www.linkedin.com/in/ayesha129" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a class="link" href="http://leetcode.com/u/Ayesha-Andleeb/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
+            <li><a class="link" href="mailto:ayeshaandleeb129@gmail.com">ayeshaandleeb129@gmail.com</a></li>
           </ul>
         </div>
 
-        <aside class="lg:col-span-4" aria-label="At a glance">
-          <div class="border-l border-rule pl-6 lg:pl-8">
-            <p class="eyebrow">At a glance</p>
-            <dl class="mt-5 space-y-5">
-              <div>
-                <dt class="text-xs uppercase tracking-wider text-muted">Education</dt>
-                <dd class="mt-1">BS Information Technology, University of Sahiwal<br><span class="text-muted">CGPA 3.58/4.00 &middot; Dec 2021 &ndash; Jun 2025</span></dd>
-              </div>
-              <div>
-                <dt class="text-xs uppercase tracking-wider text-muted">Research areas</dt>
-                <dd class="mt-1">Medical AI, computer vision, NLP &amp; LLMs, retrieval-augmented generation</dd>
-              </div>
-              <div>
-                <dt class="text-xs uppercase tracking-wider text-muted">Teaching</dt>
-                <dd class="mt-1">Section Leader, Stanford University: Code In Place<br><span class="text-muted">Selected from 2,000+ global applicants</span></dd>
-              </div>
-              <div>
-                <dt class="text-xs uppercase tracking-wider text-muted">Contests</dt>
-                <dd class="mt-1">Meta Hacker Cup Round 1: 81st globally, 5th in Pakistan</dd>
-              </div>
-            </dl>
-          </div>
-        </aside>
+        <!-- Right: profile photo -->
+        <div class="flex justify-center lg:col-span-5 lg:justify-end">
+          <img
+            src="assets/images/ayesha-profile.png"
+            alt="Ayesha Andleeb — professional photograph"
+            class="w-64 rounded-full border-4 border-rule object-cover shadow-sm sm:w-72 lg:w-80"
+            width="320" height="320"
+          >
+        </div>
+      </div>
+
+      <!-- At a glance — horizontal strip below hero -->
+      <div class="mt-14 grid gap-6 border-t border-rule pt-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <p class="text-xs uppercase tracking-wider text-muted">Education</p>
+          <p class="mt-1 font-medium">BS Information Technology</p>
+          <p class="text-sm text-muted">University of Sahiwal · CGPA 3.58/4.00</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-muted">Research Areas</p>
+          <p class="mt-1">Medical AI, Computer Vision, NLP &amp; LLMs, RAG</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-muted">Teaching</p>
+          <p class="mt-1">Section Leader (Trainer), Stanford Code in Place</p>
+          <p class="text-sm text-muted">Selected from 2,100+ global applicants</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-muted">Competitive Programming</p>
+          <p class="mt-1">Meta Hacker Cup: 81st globally, 5th in Pakistan</p>
+        </div>
       </div>
     </section>
 
@@ -146,7 +155,7 @@
         <div class="mt-10 grid gap-12 lg:grid-cols-12">
           <div class="space-y-5 text-[1.05rem] leading-relaxed lg:col-span-7 reveal">
             <p>I hold a BS in Information Technology from the University of Sahiwal (December 2021 &ndash; June 2025, CGPA 3.58/4.00). My work centres on applied machine learning: deep learning for image classification, natural language processing, and large language model systems built on retrieval-augmented generation, with a particular interest in medical AI.</p>
-            <p>My projects include brain MRI classification (my final year project), traffic sign recognition, a multi-agent RAG system for clinical report analysis, phishing URL detection, and tooling for single-cell RNA-seq analysis. Alongside this work I teach: I served as a Section Leader for Stanford University's Code In Place, and have taught Python, data structures and algorithms, and generative AI through Pak Angels, Iqra Fund and iCodeGuru.</p>
+            <p>My projects include brain MRI classification (my final year project), traffic sign recognition, a multi-agent RAG system for clinical report analysis, phishing URL detection, and tooling for single-cell RNA-seq analysis. Alongside this work I teach: I served as a Section Leader (Trainer) for Stanford University's Code In Place, and have taught Python, data structures and algorithms, and generative AI through Pak Angels, Iqra Fund and iCodeGuru.</p>
             <p>I also take part in algorithmic problem-solving contests, including Meta Hacker Cup, Harvard CS50x Puzzle Day and Advent of Code.</p>
           </div>
 
@@ -154,7 +163,7 @@
             <div class="border border-rule bg-white/60 p-6">
               <p class="eyebrow">Education</p>
               <h3 class="mt-3 font-serif text-xl font-medium">Bachelor of Science in Information Technology</h3>
-              <p class="mt-1"><a class="link" href="@@uosahiwal@@" target="_blank" rel="noopener noreferrer">University of Sahiwal</a>, Sahiwal, Pakistan</p>
+              <p class="mt-1"><a class="link" href="https://www.uosahiwal.edu.pk/" target="_blank" rel="noopener noreferrer">University of Sahiwal</a>, Sahiwal, Pakistan</p>
               <p class="mt-1 text-sm text-muted">Dec 2021 &ndash; Jun 2025 &middot; CGPA 3.58/4.00</p>
               <p class="mt-5 text-xs uppercase tracking-wider text-muted">Relevant coursework</p>
               <p class="mt-2 text-sm leading-relaxed">Data Structures &amp; Algorithms, Probability &amp; Statistics, Linear Algebra, Database Systems, Information Security, Computer Networks, Operating Systems, Software Engineering, Cybersecurity.</p>
@@ -205,23 +214,187 @@
       </div>
     </section>
 
-    <!-- ============ PROJECTS (rendered from js/projects-data.js) ============ -->
+    <!-- ============ PROJECTS ============ -->
     <section id="projects" class="section">
       <div class="mx-auto max-w-6xl px-5 sm:px-8">
-        <h2 class="section-title reveal">Research &amp; Academic Projects</h2>
-        <p class="mt-4 max-w-2xl text-muted reveal">Select a project to expand its problem statement, approach and results.</p>
 
-        <div id="projects-research" class="mt-10 space-y-6"></div>
+        <!-- ── Featured Research Project ── -->
+        <h2 class="section-title reveal">Featured Research Project</h2>
 
-        <h3 class="subhead mt-16 reveal">International Hackathon Projects</h3>
-        <div id="projects-hackathon" class="mt-6 space-y-6"></div>
+        <details id="p-fyp-brain-tumor" class="project is-featured reveal mt-10" open>
+          <summary>
+            <p class="eyebrow">Featured Research Project &middot; Final Year Project</p>
+            <h3 class="mt-2 font-serif text-xl font-semibold sm:text-2xl">Brain Tumor Classification Using Deep Learning</h3>
+            <p class="mt-1 text-sm text-muted">Medical AI &middot; Computer Vision &middot; Deep Learning</p>
+            <p class="mt-3 text-muted leading-relaxed">A deep learning system that classifies brain MRI scans into four categories (glioma, meningioma, pituitary tumor, and no tumor) using transfer learning with VGG16, achieving 94% validated accuracy.</p>
 
-        <div id="projects-additional-wrap" class="hidden">
-          <h3 class="subhead mt-16 reveal">Additional Projects</h3>
-          <div id="projects-additional" class="mt-6 space-y-6"></div>
+            <!-- Key metrics -->
+            <div class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <div><p class="metric">94%</p><p class="text-xs text-muted mt-1">Validated Accuracy</p></div>
+              <div><p class="metric">4</p><p class="text-xs text-muted mt-1">Tumor Classes</p></div>
+              <div><p class="metric">VGG16</p><p class="text-xs text-muted mt-1">Transfer Learning</p></div>
+              <div><p class="metric">Flask</p><p class="text-xs text-muted mt-1">Web Deployment</p></div>
+            </div>
+
+            <p class="mt-4 text-sm"><a class="link" href="https://github.com/AyeshaAndleeb/brain-tumor-detection-FYP" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+            <p class="toggle mt-4"></p>
+          </summary>
+          <div class="p-body">
+            <h4>Problem</h4>
+            <p>Manual reading of brain MRI scans is time-intensive and subject to inter-observer variability. An automated, accurate classifier can assist radiologists in early detection and triage.</p>
+            <h4>Approach</h4>
+            <p>Pre-trained VGG16 convolutional network fine-tuned on a labelled brain MRI dataset. Images were preprocessed and augmented before training with TensorFlow/Keras. The trained model was served through a Flask web application for real-time inference.</p>
+            <h4>Key Results</h4>
+            <ul>
+              <li>94% validated accuracy on the held-out set.</li>
+              <li>Four-class classification: glioma, meningioma, pituitary, no tumor.</li>
+              <li>Deployed as a Flask web app for real-time MRI upload and prediction.</li>
+            </ul>
+            <div class="tech">
+              <span>Python</span><span>TensorFlow</span><span>Keras</span><span>VGG16</span><span>Flask</span><span>OpenCV</span>
+            </div>
+          </div>
+        </details>
+
+        <!-- ── Research & Academic Projects ── -->
+        <h3 class="subhead mt-16 reveal">Research &amp; Academic Projects</h3>
+
+        <div class="mt-6 space-y-6">
+          <!-- MediScan -->
+          <details id="p-mediscan" class="project reveal">
+            <summary>
+              <p class="eyebrow">NLP &middot; LLMs &middot; Retrieval-Augmented Generation</p>
+              <h3 class="mt-2 font-serif text-xl font-semibold sm:text-2xl">MediScan &mdash; Smart Medical Report Analyzer</h3>
+              <p class="mt-2 text-muted leading-relaxed">A multi-agent RAG system that lets users upload medical reports and ask clinical questions in natural language, with answers grounded in the uploaded documents.</p>
+              <p class="mt-3 text-sm"><a class="link" href="https://github.com/AyeshaAndleeb/MediScan-smart-medical-report-analyzer" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+              <p class="toggle mt-4"></p>
+            </summary>
+            <div class="p-body">
+              <h4>Problem</h4>
+              <p>Patients and caregivers often struggle to interpret medical lab reports. A grounded Q&amp;A system can surface relevant findings without hallucinating.</p>
+              <h4>Approach</h4>
+              <p>Built a multi-agent pipeline using LangChain, FAISS vector search and LLaMA-3.3 (via Groq API). Uploaded PDFs are chunked, embedded and indexed; a retrieval agent fetches relevant passages before the LLM generates an answer. Deployed with Flask.</p>
+              <h4>Key Results</h4>
+              <ul>
+                <li>End-to-end RAG pipeline for medical PDF analysis.</li>
+                <li>Multi-agent architecture for retrieval and generation.</li>
+                <li>Deployed as a Flask web app with PDF upload.</li>
+              </ul>
+              <div class="tech">
+                <span>Python</span><span>LangChain</span><span>FAISS</span><span>LLaMA-3.3</span><span>Groq API</span><span>Flask</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- Phishing -->
+          <details id="p-phishing" class="project reveal">
+            <summary>
+              <p class="eyebrow">NLP &middot; Machine Learning &middot; Cybersecurity</p>
+              <h3 class="mt-2 font-serif text-xl font-semibold sm:text-2xl">Phishing Website Detection System</h3>
+              <p class="mt-2 text-muted leading-relaxed">An ML-based system that classifies URLs as legitimate or phishing using lexical and host-based features, achieving 96.5% accuracy with Logistic Regression.</p>
+              <p class="mt-3 text-sm"><a class="link" href="https://github.com/AyeshaAndleeb/Phising-website-detection-system-ml" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+              <p class="toggle mt-4"></p>
+            </summary>
+            <div class="p-body">
+              <h4>Problem</h4>
+              <p>Phishing URLs trick users into revealing credentials. An automated detector that works on the URL string alone provides a fast first line of defence.</p>
+              <h4>Approach</h4>
+              <p>Extracted lexical features (URL length, special-character counts, token analysis) and trained multiple classifiers. Compared Logistic Regression, Naive Bayes and other models using scikit-learn and NLTK. Deployed via Streamlit.</p>
+              <h4>Key Results</h4>
+              <ul>
+                <li>96.5% accuracy with Logistic Regression.</li>
+                <li>Model comparison across multiple classifiers.</li>
+                <li>Interactive Streamlit demo for URL classification.</li>
+              </ul>
+              <div class="tech">
+                <span>Python</span><span>scikit-learn</span><span>NLTK</span><span>Streamlit</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- Traffic Sign -->
+          <details id="p-traffic-sign" class="project reveal">
+            <summary>
+              <p class="eyebrow">Computer Vision &middot; Deep Learning</p>
+              <h3 class="mt-2 font-serif text-xl font-semibold sm:text-2xl">Traffic Sign Recognition System</h3>
+              <p class="mt-2 text-muted leading-relaxed">A CNN-based classifier that recognises 43 categories of traffic signs from camera images, achieving ~94% test accuracy on the GTSRB dataset.</p>
+              <p class="mt-3 text-sm"><a class="link" href="https://github.com/AyeshaAndleeb/computer-vision-powered-traffic-sign-recognition-system" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+              <p class="toggle mt-4"></p>
+            </summary>
+            <div class="p-body">
+              <h4>Problem</h4>
+              <p>Autonomous driving and driver-assistance systems need reliable, real-time traffic sign recognition across varying conditions.</p>
+              <h4>Approach</h4>
+              <p>Trained a convolutional neural network on the German Traffic Sign Recognition Benchmark (GTSRB) dataset using Keras. Applied data augmentation and early stopping. Served predictions through a Flask interface.</p>
+              <h4>Key Results</h4>
+              <ul>
+                <li>~94% test accuracy across 43 sign categories.</li>
+                <li>Robust to variations in lighting and orientation.</li>
+                <li>Flask deployment for image upload and prediction.</li>
+              </ul>
+              <div class="tech">
+                <span>Python</span><span>Keras</span><span>OpenCV</span><span>Flask</span>
+              </div>
+            </div>
+          </details>
         </div>
 
-        <noscript><p class="mt-8 text-muted">Project details need JavaScript. The full list is in the <a class="link" href="assets/cv/Ayesha_Andleeb_CV.pdf">CV</a>.</p></noscript>
+        <!-- ── International Hackathon Projects ── -->
+        <h3 class="subhead mt-16 reveal">International Hackathon Projects</h3>
+
+        <div class="mt-6 space-y-6">
+          <!-- SmartLearn -->
+          <details id="p-smartlearn" class="project reveal">
+            <summary>
+              <p class="eyebrow">LLMs &middot; RAG &middot; EdTech &middot; International Hackathon</p>
+              <h3 class="mt-2 font-serif text-xl font-semibold sm:text-2xl">SmartLearn &mdash; AI-Powered Study Assistant</h3>
+              <p class="mt-2 text-muted leading-relaxed">An AI study assistant that generates personalised learning material from uploaded documents using GPT-5 and vector search. Built during the Co-Creating with GPT-5 Hackathon.</p>
+              <p class="mt-3 text-sm"><a class="link" href="https://lablab.ai/event/co-creating-with-gpt-5/ai-mavericks/smartlearn" target="_blank" rel="noopener noreferrer">Project page</a></p>
+              <p class="toggle mt-4"></p>
+            </summary>
+            <div class="p-body">
+              <h4>Problem</h4>
+              <p>Students often lack adaptive study tools that work with their own course material.</p>
+              <h4>Approach</h4>
+              <p>Used LangChain with FAISS for document retrieval and GPT-5 for generation. Built a Streamlit front-end for document upload, question asking and quiz generation.</p>
+              <h4>Key Results</h4>
+              <ul>
+                <li>Personalised Q&amp;A and quiz generation from uploaded notes.</li>
+                <li>Built and demoed during an international hackathon.</li>
+              </ul>
+              <div class="tech">
+                <span>Python</span><span>GPT-5</span><span>LangChain</span><span>FAISS</span><span>Streamlit</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- GeneGazer -->
+          <details id="p-genegazer" class="project reveal">
+            <summary>
+              <p class="eyebrow">Bioinformatics &middot; Data Science &middot; AI &middot; International Hackathon</p>
+              <h3 class="mt-2 font-serif text-xl font-semibold sm:text-2xl">GeneGazer &mdash; Single-Cell RNA-seq Analysis Tool</h3>
+              <p class="mt-2 text-muted leading-relaxed">A tool for exploratory analysis of single-cell RNA sequencing data, augmented with Gemini AI for natural-language interpretation. Built during the Trae AI IDE: Zero Limits Hackathon.</p>
+              <p class="mt-3 text-sm"><a class="link" href="https://lablab.ai/event/code-craft-ai-x-dev-hackathon/goat-trae-hack/genegazer" target="_blank" rel="noopener noreferrer">Project page</a></p>
+              <p class="toggle mt-4"></p>
+            </summary>
+            <div class="p-body">
+              <h4>Problem</h4>
+              <p>Single-cell RNA-seq datasets are complex and require domain expertise to interpret. An AI-guided front-end can lower the barrier.</p>
+              <h4>Approach</h4>
+              <p>Integrated Scanpy for standard preprocessing and clustering with Google Gemini for AI-generated summaries of gene-expression patterns. Streamlit interface for interactive exploration.</p>
+              <h4>Key Results</h4>
+              <ul>
+                <li>Interactive single-cell analysis with dimensionality reduction and clustering.</li>
+                <li>AI-generated natural-language interpretation of results.</li>
+                <li>Built and demoed during an international hackathon.</li>
+              </ul>
+              <div class="tech">
+                <span>Python</span><span>Streamlit</span><span>Scanpy</span><span>Google Gemini AI</span>
+              </div>
+            </div>
+          </details>
+        </div>
+
       </div>
     </section>
 
@@ -238,15 +411,15 @@
             <p class="text-sm text-muted">Remote &middot; CA, USA</p>
           </div>
           <h3 class="mt-3 font-serif text-2xl font-medium sm:text-3xl">Stanford University: Code In Place</h3>
-          <p class="mt-1 text-lg">Role: <a class="link" href="@@stanford_cert@@" target="_blank" rel="noopener noreferrer">Section Leader</a> <span class="text-sm text-muted">(certificate)</span></p>
+          <p class="mt-1 text-lg">Role: <a class="link" href="https://digitalcredential.stanford.edu/check/201F9DE00B303B436AD4FCD6DE24CBFB16CCD4B5CB7075E5EBA7FBA73E3558D2RGxiTWpzNG1WcGFoOUNaaDFsNVZwRkxxUi9BNzh3NmU0VXp4K3QwMUpnbDA0ZVl3" target="_blank" rel="noopener noreferrer">Section Leader (Trainer)</a> <span class="text-sm text-muted">(certificate)</span></p>
 
           <dl class="mt-7 grid grid-cols-3 gap-4 border-y border-rule py-5 text-center sm:text-left">
-            <div><dd class="stat">2,000+</dd><dt class="stat-label">global applicants</dt></div>
+            <div><dd class="stat">2,100+</dd><dt class="stat-label">global applicants</dt></div>
             <div><dd class="stat">6</dd><dt class="stat-label">weekly live sessions</dt></div>
             <div><dd class="stat">12+</dd><dt class="stat-label">international learners</dt></div>
           </dl>
-          <p class="mt-6 max-w-3xl leading-relaxed">Selected from 2,000+ global applicants; conducted 6 weekly live sessions on Python fundamentals for 12+ international learners with personalized code reviews and one-on-one mentoring.</p>
-          <p class="mt-4 text-sm"><a class="link" href="@@h_stanford@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+          <p class="mt-6 max-w-3xl leading-relaxed">Selected from 2,100+ global applicants; conducted 6 weekly live sessions on Python fundamentals for 12+ international learners with personalized code reviews and one-on-one mentoring.</p>
+          <p class="mt-4 text-sm"><a class="link" href="https://www.linkedin.com/posts/ayesha129_stanford-codeinplace-stanforduniversity-share-7450402913455362048-bxoU/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
         </article>
 
         <!-- Timeline of the rest -->
@@ -254,32 +427,32 @@
           <li class="reveal">
             <p class="tl-date">Jun &ndash; Jul 2025</p>
             <div>
-              <h3 class="tl-title"><a class="link" href="@@pakangels@@" target="_blank" rel="noopener noreferrer">Pak Angels</a></h3>
+              <h3 class="tl-title">Pak Angels</h3>
               <p class="tl-role">Instructor &amp; Hackathon Judge &middot; Remote &middot; San Jose, CA, USA</p>
               <ul class="tl-list">
                 <li>Delivered a 6-week GenAI curriculum covering LLM APIs, RAG pipelines, and prompt engineering to 1,000+ students.</li>
                 <li>Evaluated 10+ final AI projects as a hackathon mentor &amp; judge.</li>
               </ul>
-              <p class="mt-2 text-sm"><a class="link" href="@@pakangels_post@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p class="mt-2 text-sm"><a class="link" href="https://www.linkedin.com/posts/ayesha129_generativeai-streamlit-pakangels-activity-7369825777887907840-Fq_3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
           <li class="reveal">
             <p class="tl-date">Dec 2024 &ndash; Jan 2025</p>
             <div>
-              <h3 class="tl-title"><a class="link" href="@@iqrafund@@" target="_blank" rel="noopener noreferrer">Iqra Fund</a></h3>
+              <h3 class="tl-title">Iqra Fund</h3>
               <p class="tl-role">Python Instructor &middot; Remote &middot; Blue Diamond, NV, USA</p>
               <ul class="tl-list">
                 <li>Taught Python fundamentals, including variables, loops, functions, and debugging.</li>
                 <li>Led interactive coding sessions using basic Microsoft tools for over 70+ underprivileged girls.</li>
               </ul>
-              <p class="mt-2 text-sm"><a class="link" href="@@iqrafund_post@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p class="mt-2 text-sm"><a class="link" href="https://www.linkedin.com/posts/ayesha129_empowerthrougheducation-pythonprogramming-activity-7276831442691645440-BEoE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
           <li class="reveal">
             <p class="tl-date">Jun 2023 &ndash; Jul 2025</p>
             <div>
               <h3 class="tl-title">iCodeGuru</h3>
-              <p class="tl-role"><a class="link" href="@@icodeguru_sheet@@" target="_blank" rel="noopener noreferrer">Course Trainer and Moderator</a> &middot; Remote &middot; CA, USA</p>
+              <p class="tl-role"><a class="link" href="https://docs.google.com/spreadsheets/d/1Al3OutQFs-NJSh778KNZ2yAkHfPWnBZJPwmaogSpC_I/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Course Trainer and Moderator</a> &middot; Remote &middot; CA, USA</p>
               <ul class="tl-list">
                 <li>Taught Python, Data Structures &amp; Algorithms, and Generative AI to 500+ students through 100+ hours of live, hands-on sessions.</li>
                 <li>Delivered a 5-week IELTS/Duolingo prep course.</li>
@@ -299,52 +472,52 @@
 
         <ul class="mt-10 divide-y divide-rule border-y border-rule">
           <li class="ach reveal">
-            <p class="ach-metric">2,000+<span>applicants</span></p>
+            <p class="ach-metric">2,100+<span>applicants</span></p>
             <div>
-              <p>Selected as Section Leader at Stanford University: Code In Place from 2000+ applicants for teaching Python.</p>
-              <p class="ach-link"><a class="link" href="@@h_stanford@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p>Selected as Section Leader (Trainer) at Stanford University: Code In Place from 2,100+ applicants for teaching Python.</p>
+              <p class="ach-link"><a class="link" href="https://www.linkedin.com/posts/ayesha129_stanford-codeinplace-stanforduniversity-share-7450402913455362048-bxoU/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
           <li class="ach reveal">
             <p class="ach-metric">9/9<span>puzzles solved</span></p>
             <div>
               <p>Top team lead at Harvard CS50x Puzzle Day, scoring 9/9 by solving algorithmic problems (2024, 2025 &amp; 2026).</p>
-              <p class="ach-link"><a class="link" href="@@h_harvard@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p class="ach-link"><a class="link" href="https://www.linkedin.com/feed/update/urn:li:activity:7185224145339572225/" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
           <li class="ach reveal">
             <p class="ach-metric">Top 12%<span>of 820+ teams</span></p>
             <div>
               <p>Ranked in the top 12% among 820+ international teams at the UC Berkeley Coding Competition.</p>
-              <p class="ach-link"><a class="link" href="@@h_berkeley@@" target="_blank" rel="noopener noreferrer">Supporting document</a></p>
+              <p class="ach-link"><a class="link" href="https://drive.google.com/file/d/1Sfu-y9ZDYBrjdW5V2eRYLKSw_aWjBbHi/view?usp=sharing" target="_blank" rel="noopener noreferrer">Supporting document</a></p>
             </div>
           </li>
           <li class="ach reveal">
             <p class="ach-metric">1,000+<span>students</span></p>
             <div>
-              <p>Invited as a guest speaker for a webinar on &ldquo;Generative AI Essentials&rdquo; to 1000+ students.</p>
-              <p class="ach-link"><a class="link" href="@@h_webinar@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p>Invited as a guest speaker for a webinar on &ldquo;Generative AI Essentials&rdquo; to 1,000+ students.</p>
+              <p class="ach-link"><a class="link" href="https://www.linkedin.com/posts/ayesha129_speakerexperience-teachingjourney-icodeguru-activity-7355064020946640896-MzMB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
           <li class="ach reveal">
             <p class="ach-metric">81st<span>globally</span></p>
             <div>
               <p>Qualified for Meta Hacker Cup Round 1, ranked 81st globally &amp; 5th in Pakistan.</p>
-              <p class="ach-link"><a class="link" href="@@h_meta@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p class="ach-link"><a class="link" href="https://www.linkedin.com/posts/ayesha-andleeb_metahackercup-competitiveprogramming-codingjourney-activity-7384845490753970176-bqEN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
           <li class="ach reveal">
             <p class="ach-metric">3rd<span>of 123 teams</span></p>
             <div>
               <p>3rd position out of 123 teams at Codestral Hackathon, recognized for innovative solutions.</p>
-              <p class="ach-link"><a class="link" href="@@h_codestral@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p class="ach-link"><a class="link" href="https://www.linkedin.com/posts/ayesha-andleeb-262352278_thrilled-to-announce-our-3rd-place-win-activity-7228051381528535040-d2ja?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
           <li class="ach reveal">
             <p class="ach-metric">50/50<span>challenges</span></p>
             <div>
               <p>Completed 50/50 challenges in the 25-day Advent of Code 2024 series, secured 46th national among 311,017.</p>
-              <p class="ach-link"><a class="link" href="@@h_aoc@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
+              <p class="ach-link"><a class="link" href="https://www.linkedin.com/feed/update/urn:li:activity:7389592475776204800/" target="_blank" rel="noopener noreferrer">LinkedIn post</a></p>
             </div>
           </li>
         </ul>
@@ -360,37 +533,37 @@
           <li class="talk reveal">
             <span class="tag">Workshop</span>
             <p>Delivered a 2-hour online workshop on &ldquo;How to Build Your First AI App from Idea to Deployment.&rdquo;</p>
-            <a class="link" href="@@t_aiapp@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+            <a class="link" href="https://www.linkedin.com/posts/ayesha129_%F0%9D%90%88-%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%A5%F0%9D%90%B2-%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%9D-%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%9E-%F0%9D%90%A8%F0%9D%90%A9%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2-activity-7352298446919254017-Fk07?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
           </li>
           <li class="talk reveal">
             <span class="tag">Contest prep</span>
             <p>Mentored a 5-day &ldquo;UC Berkeley Calico Contest&rdquo; prep workshops for 100+ students.</p>
-            <a class="link" href="@@t_calico@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+            <a class="link" href="https://www.linkedin.com/posts/ayesha129_github-ayeshaandleebuc-berkley-coding-competition-activity-7310348491979943939-LEPK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
           </li>
           <li class="talk reveal">
             <span class="tag">Workshop</span>
             <p>Delivered an online workshop on &ldquo;Object Oriented Programming&rdquo; for 80+ underprivileged learners.</p>
-            <a class="link" href="@@t_oop@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+            <a class="link" href="https://www.linkedin.com/posts/ayesha-andleeb_linkedin-icodeguru-oopsconcepts-activity-7164960431432843265-TB5w?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
           </li>
           <li class="talk reveal">
             <span class="tag">Guest talk</span>
             <p>Invited as a guest speaker to share my teaching experience from Stanford University: Code In Place program.</p>
-            <a class="link" href="@@t_stanford@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+            <a class="link" href="https://www.linkedin.com/posts/ayesha129_%F0%9D%90%84%F0%9D%90%B1%F0%9D%90%9C%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%9D-%F0%9D%90%AD%F0%9D%90%A8-%F0%9D%90%86%F0%9D%90%A2%F0%9D%90%AF%F0%9D%90%9E-%F0%9D%90%81%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%A4-activity-7307003926539595777-u4kp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
           </li>
           <li class="talk reveal">
             <span class="tag">Webinar</span>
             <p>Led a Meta Hacker Cup prep webinar, guiding participants on problem-solving and contest strategy.</p>
-            <a class="link" href="@@t_meta@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+            <a class="link" href="https://www.linkedin.com/posts/ayesha129_metaabrhackerabrcupabr2024-hayatianabrcomputingabrsociety-activity-7239457700823072769-MMP1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
           </li>
           <li class="talk reveal">
             <span class="tag">Guest talk</span>
-            <p>Guest speaker for a webinar on &ldquo;Generative AI Essentials&rdquo; to 1000+ students.</p>
-            <a class="link" href="@@h_webinar@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+            <p>Guest speaker for a webinar on &ldquo;Generative AI Essentials&rdquo; to 1,000+ students.</p>
+            <a class="link" href="https://www.linkedin.com/posts/ayesha129_speakerexperience-teachingjourney-icodeguru-activity-7355064020946640896-MzMB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
           </li>
           <li class="talk reveal">
             <span class="tag">Hackathon</span>
             <p>Hackathon mentor &amp; judge: evaluated 10+ final AI projects (Pak Angels).</p>
-            <a class="link" href="@@pakangels_post@@" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+            <a class="link" href="https://www.linkedin.com/posts/ayesha129_generativeai-streamlit-pakangels-activity-7369825777887907840-Fq_3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOux-oBPoy_p4NpSxIaQzpFRbLs1IMnN-0" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
           </li>
         </ul>
       </div>
@@ -425,10 +598,10 @@
             <h2 class="section-title">Contact</h2>
             <p class="mt-4 max-w-md text-muted">For research collaboration, graduate study enquiries, or teaching and mentoring.</p>
             <dl class="mt-6 divide-y divide-rule border-y border-rule text-[0.97rem]">
-              <div class="contact-row"><dt>Email</dt><dd><a class="link" href="@@email@@">ayeshaandleeb129@gmail.com</a></dd></div>
-              <div class="contact-row"><dt>LinkedIn</dt><dd><a class="link" href="@@linkedin@@" target="_blank" rel="noopener noreferrer">linkedin.com/in/ayesha129</a></dd></div>
-              <div class="contact-row"><dt>GitHub</dt><dd><a class="link" href="@@github@@" target="_blank" rel="noopener noreferrer">github.com/AyeshaAndleeb</a></dd></div>
-              <div class="contact-row"><dt>LeetCode</dt><dd><a class="link" href="@@leetcode@@" target="_blank" rel="noopener noreferrer">leetcode.com/u/Ayesha-Andleeb</a></dd></div>
+              <div class="contact-row"><dt>Email</dt><dd><a class="link" href="mailto:ayeshaandleeb129@gmail.com">ayeshaandleeb129@gmail.com</a></dd></div>
+              <div class="contact-row"><dt>LinkedIn</dt><dd><a class="link" href="https://www.linkedin.com/in/ayesha129" target="_blank" rel="noopener noreferrer">linkedin.com/in/ayesha129</a></dd></div>
+              <div class="contact-row"><dt>GitHub</dt><dd><a class="link" href="https://github.com/AyeshaAndleeb" target="_blank" rel="noopener noreferrer">github.com/AyeshaAndleeb</a></dd></div>
+              <div class="contact-row"><dt>LeetCode</dt><dd><a class="link" href="http://leetcode.com/u/Ayesha-Andleeb/" target="_blank" rel="noopener noreferrer">leetcode.com/u/Ayesha-Andleeb</a></dd></div>
             </dl>
           </div>
         </div>
@@ -443,7 +616,6 @@
     </div>
   </footer>
 
-  <script src="js/projects-data.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
