@@ -1,127 +1,70 @@
 # ayeshaandleeb.github.io
 
-Academic portfolio website for **Ayesha Andleeb** — AI, Machine Learning & Deep Learning.
+Academic homepage of **Ayesha Andleeb** — machine learning, deep learning, medical imaging
+and LLM systems.
 
-## Live site
+Live: **https://ayeshaandleeb.github.io**
 
-Once deployed: **https://ayeshaandleeb.github.io**
+## Tech
 
-## Tech stack
-
-| Layer   | Tool |
-|---------|------|
-| Markup  | HTML 5 |
-| Styling | Tailwind CSS (CDN) + custom design-system CSS |
-| Scripts | Vanilla JavaScript (no build step) |
-| Hosting | GitHub Pages (static) |
-
-No backend, no build step, no frameworks to install.
-
----
-
-## Folder structure
+Plain HTML, CSS and JavaScript. No framework, no build step, no dependencies to install —
+edit a file, commit, and GitHub Pages serves it. Google Fonts is the only external request.
 
 ```
-ayeshaandleeb.github.io/
-├── index.html              ← main page
-├── css/
-│   └── styles.css          ← design-system tokens & component styles
-├── js/
-│   ├── projects-data.js    ← all project definitions (edit here to add projects)
-│   └── script.js           ← URL resolver, card renderer, nav, animations
+.
+├── index.html          ← the whole page; all content lives here
+├── css/styles.css      ← design system (tokens at the top) + light/dark themes
+├── js/script.js        ← theme toggle, mobile nav, scroll-spy, footer year
 ├── assets/
-│   ├── cv/
-│   │   └── Ayesha_Andleeb_CV.pdf
-│   ├── images/             ← profile or section images (add later)
-│   └── projects/           ← project screenshots (add later)
-├── .nojekyll               ← tells GitHub Pages to skip Jekyll
-└── README.md
+│   ├── cv/Ayesha_Andleeb_CV.pdf
+│   └── images/ayesha-profile.jpg   ← 448×448, used by the page
+│                   ayesha-profile.png  ← original, kept as the source file
+├── robots.txt
+├── sitemap.xml
+└── .nojekyll           ← GitHub Pages serves the files as-is
 ```
 
----
+## Page structure
 
-## Deploy to GitHub Pages
+About · News · Research interests · Publications · Research projects · Hackathon projects ·
+Teaching · Invited talks & workshops · Awards & honours · Technical skills · CV & contact —
+the section order most professor and PhD-student homepages use.
 
-1. **Create the repository** on GitHub named exactly `AyeshaAndleeb.github.io` (your GitHub username, case-sensitive).
+## Editing
 
-2. **Push the code:**
-   ```bash
-   cd ayeshaandleeb.github.io
-   git init
-   git add -A
-   git commit -m "Initial commit: academic portfolio"
-   git branch -M main
-   git remote add origin https://github.com/AyeshaAndleeb/ayeshaandleeb.github.io.git
-   git push -u origin main
-   ```
+**Add a news item.** In `index.html` find `<!-- NEWS -->`, copy one `<li>` block to the top
+of the list, and change the `<time datetime="YYYY-MM">` and the text. Newest goes first.
 
-3. **Enable Pages:** go to the repository **Settings → Pages**, set source to **Deploy from a branch**, branch **main**, folder **/ (root)**, then **Save**.
+**Add a publication.** The Publications section currently holds a short placeholder note.
+A ready-to-fill `<article class="entry">` template sits in an HTML comment directly below it:
+delete the `<div class="panel">…</div>`, paste the template inside a
+`<div class="entries"> … </div>` wrapper, and fill in the title, authors, venue and links.
+Bold your own name (`<strong>A. Andleeb</strong>`) — that is the academic convention.
 
-4. Wait 1–2 minutes, then visit **https://ayeshaandleeb.github.io**.
+**Add a project.** Copy any `<article class="entry">` block in the Research projects section.
+Each has: a thumbnail tile (`entry-thumb` — a short label and a one-line caption), title,
+meta line, two-sentence abstract, links, and a collapsible "Method and results".
 
----
+**Change colours or fonts.** Every colour and font is a custom property in the `:root` block
+at the top of `css/styles.css`, with the dark-theme values just below it.
 
-## How to add a new project
+**Update the CV.** Replace `assets/cv/Ayesha_Andleeb_CV.pdf`, keeping the filename.
 
-Open **`js/projects-data.js`** and add an object to the `PROJECTS` array:
+**Change the portrait.** Replace `assets/images/ayesha-profile.jpg` with a square image around
+448×448. Keep it under ~100 KB so the page stays fast.
 
-```js
-{
-  id:       "p-your-project",       // unique HTML id (used by anchor links)
-  section:  "research",             // "research" | "hackathon" | "additional"
-  featured: false,                  // true for a border highlight
-  title:    "Project Title",
-  area:     "Computer Vision · Deep Learning",
-  overview: "One-paragraph summary shown before expanding.",
-  problem:  "What problem does it solve?",
-  approach: "How you built it.",
-  tech:     ["Python", "TensorFlow"],
-  results:  [
-    "Result or metric 1.",
-    "Result or metric 2."
-  ],
-  links:    {
-    github: "https://github.com/...",
-    demo:   "https://...",          // optional
-    paper:  "https://..."           // optional
-  }
-}
+**Add Google Scholar.** Once a paper is indexed, uncomment the Scholar chip in the masthead
+and add the profile URL to `sameAs` in the JSON-LD block in `<head>`.
+
+Remember to update the "Last updated" line in the footer when you make a round of changes.
+
+## Local preview
+
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
 ```
-
-The card is rendered automatically on page load — no HTML editing required.
-
-**Adding a screenshot:** place the image in `assets/projects/` and add an `image` field (not yet rendered by the card template, but you can extend the renderer in `script.js`).
-
----
-
-## How to update the CV
-
-1. Replace the file at **`assets/cv/Ayesha_Andleeb_CV.pdf`** with your new PDF (keep the same filename).
-2. Commit and push.
-
-The "Download CV" buttons all point to that path.
-
----
-
-## How to add a profile photo
-
-1. Place your image (e.g. `profile.jpg`) in `assets/images/`.
-2. In `index.html`, add an `<img>` inside the hero section or the About section where you'd like it to appear.
-
----
-
-## Customisation
-
-| What | Where |
-|------|-------|
-| Colours & fonts | CSS custom properties in `css/styles.css` (`:root` block) |
-| Navigation links | `<header>` in `index.html` |
-| External URLs | `URLS` object at the top of `js/script.js` |
-| Project data | `js/projects-data.js` |
-| Meta / SEO | `<head>` in `index.html` |
-
----
 
 ## License
 
-Content © Ayesha Andleeb. Code may be reused under MIT.
+Content © Ayesha Andleeb. Code may be reused under the MIT License.
