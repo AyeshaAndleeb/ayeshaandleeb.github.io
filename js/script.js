@@ -1,88 +1,102 @@
-/* ──────────────────────────────────────────────
-   script.js  –  Ayesha Andleeb academic portfolio
-   ────────────────────────────────────────────── */
+/* ==========================================================================
+   Ayesha Andleeb — academic homepage
+   Progressive enhancement only: the page works with JavaScript disabled.
+   ========================================================================== */
 (function () {
   "use strict";
 
-  /* ─── 1. Mobile nav toggle ─── */
-  function initMobileNav() {
-    var btn  = document.getElementById("nav-toggle");
-    var menu = document.getElementById("mobile-nav");
-    if (!btn || !menu) return;
+  /* ---------- Colour theme ---------- */
+  function initTheme() {
+    var btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+
+    function currentTheme() {
+      var set = document.documentElement.getAttribute("data-theme");
+      if (set === "light" || set === "dark") return set;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
 
     btn.addEventListener("click", function () {
-      var open = menu.classList.toggle("hidden") === false;
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) { /* private mode */ }
+    });
+  }
+
+  /* ---------- Mobile navigation ---------- */
+  function initNav() {
+    var btn = document.getElementById("nav-toggle");
+    var menu = document.getElementById("nav-mobile");
+    if (!btn || !menu) return;
+
+    function close() {
+      menu.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.textContent = "Menu";
+    }
+
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", String(open));
       btn.textContent = open ? "Close" : "Menu";
     });
 
-    /* close on link tap */
-    menu.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        menu.classList.add("hidden");
-        btn.setAttribute("aria-expanded", "false");
-        btn.textContent = "Menu";
-      });
+    Array.prototype.forEach.call(menu.querySelectorAll("a"), function (a) {
+      a.addEventListener("click", close);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menu.classList.contains("is-open")) { close(); btn.focus(); }
     });
   }
 
-  /* ─── 2. Scroll-reveal (IntersectionObserver) ─── */
-  function initReveal() {
-    document.documentElement.classList.add("js");
+  /* ---------- Highlight the section being read ---------- */
+  function initScrollSpy() {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".nav-desktop .nav-link"));
+    if (!links.length) return;
 
-    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var targets = links.map(function (link) {
+      var href = link.getAttribute("href") || "";
+      return { link: link, el: href.charAt(0) === "#" ? document.getElementById(href.slice(1)) : null };
+    }).filter(function (t) { return t.el; });
 
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add("in");
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
-  }
-
-  /* ─── 3. Active nav highlight ─── */
-  function initActiveNav() {
-    var links = document.querySelectorAll("#site-header nav:not(#mobile-nav) .nav-link");
-    var sections = [];
-
-    links.forEach(function (a) {
-      var id = a.getAttribute("href");
-      if (id && id.startsWith("#")) {
-        var el = document.getElementById(id.substring(1));
-        if (el) sections.push({ el: el, link: a });
-      }
-    });
-
-    if (!sections.length) return;
+    if (!targets.length) return;
 
     function update() {
-      var scrollY = window.scrollY + 120;
-      var current = null;
-      sections.forEach(function (s) { if (s.el.offsetTop <= scrollY) current = s; });
-      links.forEach(function (a) { a.classList.remove("active"); });
-      if (current) current.link.classList.add("active");
+      var probe = window.scrollY + 140;
+      var active = targets[0];
+      targets.forEach(function (t) { if (t.el.offsetTop <= probe) active = t; });
+
+      // At the very bottom, the last section is the one in view.
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+        active = targets[targets.length - 1];
+      }
+
+      targets.forEach(function (t) {
+        if (t === active) t.link.setAttribute("aria-current", "true");
+        else t.link.removeAttribute("aria-current");
+      });
     }
 
-    var ticking = false;
+    var queued = false;
     window.addEventListener("scroll", function () {
-      if (!ticking) { window.requestAnimationFrame(function () { update(); ticking = false; }); ticking = true; }
-    });
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(function () { update(); queued = false; });
+    }, { passive: true });
+
+    window.addEventListener("resize", update, { passive: true });
     update();
   }
 
-  /* ─── 4. Footer year ─── */
-  function setYear() {
+  /* ---------- Footer year ---------- */
+  function initYear() {
     var el = document.getElementById("year");
-    if (el) el.textContent = new Date().getFullYear();
+    if (el) el.textContent = String(new Date().getFullYear());
   }
 
-  /* ─── Boot ─── */
-  initMobileNav();
-  initReveal();
-  initActiveNav();
-  setYear();
+  initTheme();
+  initNav();
+  initScrollSpy();
+  initYear();
 })();

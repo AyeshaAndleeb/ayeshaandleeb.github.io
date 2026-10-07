@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ayeshaandleeb.github.io/sitemap.xml
