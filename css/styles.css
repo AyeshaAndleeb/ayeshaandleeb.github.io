@@ -422,7 +422,7 @@ small { font-size: .85em; }
   .nav-toggle { display: none; }
   .masthead-grid { grid-template-columns: 1fr 15rem; gap: 3.5rem; align-items: start; }
   .masthead-media { order: 2; justify-self: end; }
-  .portrait { width: 14rem; }
+  .portrait { width: 14rem; margin-top: 2.75rem; }  /* sits level with the bio, not the name */
   .glance { grid-template-columns: repeat(4, 1fr); }
   .interests { grid-template-columns: repeat(3, 1fr); }
   .entry { grid-template-columns: 12.5rem 1fr; }
