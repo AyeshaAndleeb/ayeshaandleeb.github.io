@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ayesha Andleeb</title>
-<meta name="description" content="Ayesha Andleeb — researcher in machine learning and deep learning, working on medical imaging, computer vision and retrieval-augmented LLM systems. Research, projects, teaching, talks and CV.">
+<meta name="description" content="Ayesha Andleeb, researcher in machine learning and deep learning, working on medical imaging, computer vision and trustworthy AI. Research, projects, teaching, talks and CV.">
 <link rel="canonical" href="https://ayeshaandleeb.github.io/">
 
 <meta property="og:type" content="profile">
@@ -116,7 +116,7 @@
 
       <div class="masthead-body">
         <h1>Ayesha Andleeb</h1>
-        <p class="title-line">Machine learning &amp; deep learning · medical imaging, computer vision, LLM systems</p>
+        <p class="title-line">Machine learning &amp; deep learning · medical imaging, computer vision, trustworthy AI</p>
         <p class="affil">BS Information Technology, University of Sahiwal, Pakistan</p>
 
         <div class="bio">
@@ -182,7 +182,7 @@
         <div>
           <dt>Teaching</dt>
           <dd>Section Leader, Stanford Code in Place
-            <small>Selected from 2,100+ global applicants</small>
+            <small>Selected from 2,100+ applicants</small>
           </dd>
         </div>
         <div>
@@ -243,7 +243,7 @@
         </li>
         <li>
           <time datetime="2024-04">Apr 2024</time>
-          <p>Selected as a <strong>Section Leader</strong> for Stanford University's Code in Place from 2,100+ global applicants.
+          <p>Selected as a <strong>Section Leader</strong> for Stanford University's Code in Place from 2,100+ applicants.
             <a class="link" href="https://www.linkedin.com/posts/ayesha129_stanford-codeinplace-stanforduniversity-share-7450402913455362048-bxoU" target="_blank" rel="noopener">post</a></p>
         </li>
       </ul>
@@ -256,8 +256,8 @@
     <div class="wrap">
       <h2 class="section-title">Research interests</h2>
       <p class="section-intro">
-        My interest is in machine learning that has to work on real, messy evidence —
-        a scan, a lab report, a URL — and in making the output of such a model
+        My interest is in machine learning that has to work on real, messy evidence such as
+        a scan, a lab report or a URL, and in making the output of such a model
         trustworthy enough for a person to act on. Each theme below links to the work it comes from.
       </p>
 
@@ -294,9 +294,10 @@
           </div>
         </article>
         <article class="interest">
-          <h3>Applied ML &amp; evaluation</h3>
-          <p>Model comparison and honest evaluation: baselines, held-out validation and error analysis.</p>
+          <h3>Trustworthy &amp; secure ML</h3>
+          <p>Making model output dependable: honest baselines and held-out validation, and classifiers that hold up against adversarial input such as phishing URLs.</p>
           <div class="tags">
+            <a href="#p-phishing">Phishing detection</a>
             <a href="#p-phishing">Model comparison</a>
           </div>
         </article>
@@ -327,7 +328,7 @@
       </div>
 
       <!-- ─────────────────────────────────────────────────────────────────
-        TEMPLATE — when a paper is accepted, delete the panel above and
+        TEMPLATE: when a paper is accepted, delete the panel above and
         paste this block inside a <div class="entries"> … </div> wrapper:
 
         <article class="entry">
@@ -363,8 +364,8 @@
             <h3>Brain Tumour Classification from MRI with Transfer Learning<span class="badge">Final year project</span></h3>
             <p class="entry-meta">Medical imaging · Computer vision · Deep learning<br><em>University of Sahiwal</em>, 2025</p>
             <p class="entry-abstract">
-              A four-way classifier for brain MRI scans — glioma, meningioma, pituitary tumour
-              and no tumour — built by fine-tuning a pre-trained VGG16 network and served
+              A four-way classifier for brain MRI scans (glioma, meningioma, pituitary tumour
+              and no tumour), built by fine-tuning a pre-trained VGG16 network and served
               through a web application for single-scan inference. Reached 94% accuracy on
               the held-out validation set.
             </p>
@@ -394,7 +395,7 @@
         <article class="entry" id="p-mediscan">
           <div class="entry-thumb"><b>RAG</b><span>Multi-agent · LLaMA-3.3</span></div>
           <div>
-            <h3>MediScan — Grounded Question Answering over Medical Reports</h3>
+            <h3>MediScan: Grounded Question Answering over Medical Reports</h3>
             <p class="entry-meta">NLP · LLMs · Retrieval-augmented generation<br><em>Independent project</em>, 2025</p>
             <p class="entry-abstract">
               A multi-agent retrieval-augmented system that takes an uploaded medical report
@@ -443,7 +444,7 @@
                 <h4>Motivation</h4>
                 <p>Page content takes time to fetch and can be cloaked. A detector that works on the URL alone can run before a page loads.</p>
                 <h4>Method</h4>
-                <p>Lexical features — length, token counts, special-character frequency, suspicious substrings — extracted with NLTK and scikit-learn, then used to train and compare several classifiers under the same split. Packaged as a Streamlit demo that scores a pasted URL.</p>
+                <p>Lexical features (length, token counts, special-character frequency, suspicious substrings) extracted with NLTK and scikit-learn, then used to train and compare several classifiers under the same split. Packaged as a Streamlit demo that scores a pasted URL.</p>
                 <h4>Results</h4>
                 <ul>
                   <li>96.5% accuracy with logistic regression.</li>
@@ -497,7 +498,7 @@
         <article class="entry" id="p-smartlearn">
           <div class="entry-thumb"><b>GPT-5</b><span>Study assistant</span></div>
           <div>
-            <h3>SmartLearn — Study Material Generation from Course Documents</h3>
+            <h3>SmartLearn: Study Material Generation from Course Documents</h3>
             <p class="entry-meta">LLMs · RAG · Education<br><em>Co-Creating with GPT-5 hackathon</em>, 2025</p>
             <p class="entry-abstract">
               A study assistant that turns a student's own notes and course PDFs into
@@ -528,7 +529,7 @@
         <article class="entry" id="p-genegazer">
           <div class="entry-thumb"><b>scRNA</b><span>Scanpy · Gemini</span></div>
           <div>
-            <h3>GeneGazer — Single-Cell RNA-seq Exploration with AI Interpretation</h3>
+            <h3>GeneGazer: Single-Cell RNA-seq Exploration with AI Interpretation</h3>
             <p class="entry-meta">Computational biology · Data science<br><em>Trae AI IDE hackathon</em>, 2025</p>
             <p class="entry-abstract">
               An interactive tool for single-cell RNA sequencing data that runs the standard
@@ -574,23 +575,23 @@
 
       <div class="appointments">
         <article class="appointment">
-          <p class="when">Apr – Jun 2024</p>
+          <p class="when">Apr–Jun 2024</p>
           <div>
-            <h3>Stanford University — Code in Place</h3>
+            <h3>Stanford University, Code in Place</h3>
             <p class="role">Section Leader (Trainer) · Remote</p>
             <ul>
-              <li>Selected from more than 2,100 global applicants to lead a section.</li>
+              <li>Selected from 2,100+ applicants to lead a section.</li>
               <li>Ran six weekly live sessions on Python fundamentals for 12+ international students.</li>
               <li>Gave personalised code reviews and one-to-one mentoring throughout the course.</li>
             </ul>
             <p class="after">
-              <a class="link" href="https://digitalcredential.stanford.edu/check/201F9DE00B303B436AD4FCD6DE24CBFB16CCD4B5CB7075E5EBA7FBA73E3558D2RGxiTWpzNG1WcGFoOUNaaDFsNVZwRkxxUi9BNzh3NmU0VXp4K3QwMUpnbDA0ZVl3" target="_blank" rel="noopener">Verified certificate</a>
+              <a class="link" href="https://digitalcredential.stanford.edu/check/10245EB1436BE60CE8045F697B2A266E6BB82D820FE2C8E121F46E99D11B6C0DV3NEU1J3Z29mVCsyL3M1TVdJcFBkbFc5V1NXV0ovdG5ZSEkxOWdWMkt5aUREQVJu" target="_blank" rel="noopener">Verified certificate</a>
             </p>
           </div>
         </article>
 
         <article class="appointment">
-          <p class="when">Jun – Jul 2025</p>
+          <p class="when">Jun–Jul 2025</p>
           <div>
             <h3>Pak Angels</h3>
             <p class="role">Instructor &amp; hackathon judge · Remote</p>
@@ -626,7 +627,7 @@
             <h3>Iqra Fund</h3>
             <p class="role">Python instructor · Remote</p>
             <ul>
-              <li>Taught Python fundamentals — variables, loops, functions and debugging — to 70+ girls from underserved communities.</li>
+              <li>Taught Python fundamentals (variables, loops, functions and debugging) to 70+ girls from underserved communities.</li>
               <li>Ran interactive sessions designed for low-bandwidth, shared-device classrooms.</li>
             </ul>
             <p class="after">
@@ -646,12 +647,12 @@
       <ul class="rows">
         <li>
           <span class="kind">Webinar</span>
-          <p><em>Generative AI Essentials</em> — invited guest speaker, audience of 1,000+ students.</p>
+          <p>Invited guest speaker on <em>Generative AI Essentials</em>, to an audience of 1,000+ students.</p>
           <a class="link src" href="https://www.linkedin.com/posts/ayesha129_speakerexperience-teachingjourney-icodeguru-activity-7355064020946640896-MzMB" target="_blank" rel="noopener">post</a>
         </li>
         <li>
           <span class="kind">Workshop</span>
-          <p><em>How to Build Your First AI App: from Idea to Deployment</em> — two-hour online workshop.</p>
+          <p>Two-hour online workshop, <em>How to Build Your First AI App: from Idea to Deployment</em>.</p>
           <a class="link src" href="https://www.linkedin.com/posts/ayesha129_activity-7352298446919254017-Fk07" target="_blank" rel="noopener">post</a>
         </li>
         <li>
@@ -691,12 +692,12 @@
       <ul class="rows">
         <li>
           <span class="award-year">2024</span>
-          <p>Selected as <strong>Section Leader</strong>, Stanford University Code in Place — from 2,100+ global applicants.</p>
+          <p>Selected as <strong>Section Leader</strong>, Stanford University Code in Place, from 2,100+ applicants.</p>
           <a class="link src" href="https://www.linkedin.com/posts/ayesha129_stanford-codeinplace-stanforduniversity-share-7450402913455362048-bxoU" target="_blank" rel="noopener">post</a>
         </li>
         <li>
           <span class="award-year">2025</span>
-          <p>Qualified for <strong>Meta Hacker Cup Round 1</strong> — 81st globally, 5th in Pakistan.</p>
+          <p>Qualified for <strong>Meta Hacker Cup Round 1</strong>, placing 81st globally and 5th in Pakistan.</p>
           <a class="link src" href="https://www.linkedin.com/posts/ayesha-andleeb_metahackercup-competitiveprogramming-codingjourney-activity-7384845490753970176-bqEN" target="_blank" rel="noopener">post</a>
         </li>
         <li>
